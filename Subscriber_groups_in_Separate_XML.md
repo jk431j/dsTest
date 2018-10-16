@@ -21,7 +21,7 @@ will overwrite the base *subscriber_database*
 ```XML
 <subscriber_database count="6" name="ClientDB">
 ```
-- in the test case XML configuration you can specify additional *subscriber_profiles* and you have to specify at least one *subscriber_group*. 
+- you can define additional *subscriber_profiles* and you have to define at least one *subscriber_group*. 
 You cannot load subscriber profile without having subscriber group
 - you have to specify *start* and *end* for subscriber group, using *count* does not work
 - the *start* and *end* has to be unique amongst all test configurations otherwise you will get an error
@@ -29,9 +29,8 @@ You cannot load subscriber profile without having subscriber group
 ```XML
  <subscriber_group start="2" end="2" name="R128957">
 ```
-- in the subscriber group you can refer to any profiles that are already sourced: profiles from base configuration, profiles from previous 
-test cases or profiles defined in this XML configuration. For example here we have PCC and subscription profiles (both named "Post") from the 
-base configuration and newly defined UDC and SmartProfiles (both named "R128957)
+- subscriber group can refer to any profiles that are already sourced: profiles from base configuration, profiles from previous 
+test cases or profiles defined in this XML configuration. For example here we have PCC and subscription profiles (both named "Post") from the base configuration and newly defined UDC and SmartProfiles (both named "R128957)
 ```XML
 <group_profiles>
   <pcc_profile>Post</pcc_profile>
