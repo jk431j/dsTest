@@ -68,3 +68,8 @@ or add initial command to the end of XML configuration:
 ```
 spr:spr subscriber_database subscriber_profiles SmartProfile:R128957;delete:true
 ```
+- In order to de-provision subscriber group disable it first and then set *provision* to false:
+```
+spr:spr subscriber_database subscriber_group:R128957 enable::false
+spr:spr subscriber_database subscriber_group:R128957 provision::false
+```
